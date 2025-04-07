@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ALPHA/LAB</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+
+</head>
+
+<body>
+    <!--Sidebar-->
+      <div class="app-container">
+      {% include "side.html" %}
+            <div class="app-content">
+              {% include "head.html" %}
+              {% include "header.html" %}
+
+              {% block Analyses %}
+              {% endblock Analyses %}
+
+              {% comment %} {% block exament %}
+              
+              {% endblock exament %} {% endcomment %}
+            </div>
+      </div>
+
+<!-- partial -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
